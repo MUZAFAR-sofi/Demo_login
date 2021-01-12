@@ -27,4 +27,9 @@ public class UserService {
 		return false;
 	}
 
+	public boolean getCreditHistory(String userId) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }
