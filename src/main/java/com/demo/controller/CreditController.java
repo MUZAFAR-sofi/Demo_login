@@ -1,4 +1,4 @@
-package com.demo.credit.controller;
+package com.demo.controller;
 
 import java.util.List;
 
@@ -9,16 +9,15 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.demo.domain.History;
-import com.demo.login.service.CallService;
-
+import com.demo.domain.CreditHistory;
+import com.demo.login.service.CreditService;
 
 @RestController
-@RequestMapping("/api/call")
-public class CallController {
+@RequestMapping("/api/credit")
+public class CreditController {
 
 	@Autowired
-	CallService mCallService;
+	CreditService mCreditService;
 	
 
 	@GetMapping(path = "/")
@@ -28,11 +27,11 @@ public class CallController {
 	}
 	
 	
-	@GetMapping(path = "/callHistory/{userId}", produces = MediaType.APPLICATION_JSON_VALUE)
-	public List<History> callHistory(@PathVariable("userId") String userId) {
+	@GetMapping(path = "/creditHistory/{userId}", produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<CreditHistory> creditHistory(@PathVariable("userId") String userId) {
 
-		List<History> myHistoryList = mCallService.getCallHistory(userId);
-		return myHistoryList;
+		List<CreditHistory> myCreditList = mCreditService.getCreditHistory(userId);
+		return myCreditList;
 
 	}
 }

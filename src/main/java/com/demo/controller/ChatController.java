@@ -1,4 +1,4 @@
-package com.demo.credit.controller;
+package com.demo.controller;
 
 import java.util.List;
 
