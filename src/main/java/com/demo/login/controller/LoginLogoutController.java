@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.demo.login.domain.CreditHistory;
-import com.demo.login.domain.User;
+import com.demo.domain.CreditHistory;
+import com.demo.domain.User;
 import com.demo.login.service.CreditService;
 import com.demo.login.service.UserService;
 

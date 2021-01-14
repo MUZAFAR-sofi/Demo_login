@@ -7,7 +7,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.demo.login.domain.CreditHistory;
+import com.demo.domain.CreditHistory;
 @Service
 public class CreditService {
 	

@@ -1,4 +1,4 @@
-package com.demo.login.domain;
+package com.demo.domain;
 
 public class CreditHistory {
 

@@ -3,7 +3,7 @@ package com.demo.login.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.demo.login.domain.User;
+import com.demo.domain.User;
 import com.demo.login.repository.UserRepository;
 
 @Service

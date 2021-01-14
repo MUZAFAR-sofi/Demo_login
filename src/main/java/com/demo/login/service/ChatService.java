@@ -7,7 +7,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.demo.login.domain.History;
+import com.demo.domain.History;
 @Service
 public class ChatService {
 	
