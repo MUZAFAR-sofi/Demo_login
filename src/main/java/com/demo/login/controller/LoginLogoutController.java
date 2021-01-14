@@ -25,7 +25,7 @@ import com.demo.login.service.UserService;
 @RestController
 @RequestMapping("/api/login")
 @CrossOrigin(origins = "http://localhost:4200")
-public class LoginController {
+public class LoginLogoutController {
 
 	@Autowired
 	UserService mUserLoginService;
@@ -50,4 +50,16 @@ public class LoginController {
 		return loginSuccess;
 	}
 
+	@PostMapping(path = "/logout")
+	public String logout(@RequestBody User pUser) {
+
+		String loginSuccess = "Failure";
+
+		boolean isValidUser = mUserLoginService.verifyUser(pUser);
+
+		if (isValidUser) {
+			loginSuccess = "Success";
+		}
+		return loginSuccess;
+	}
 }
