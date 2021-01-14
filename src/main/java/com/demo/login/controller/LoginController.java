@@ -23,15 +23,13 @@ import com.demo.login.service.UserService;
  *
  */
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/login")
 @CrossOrigin(origins = "http://localhost:4200")
 public class LoginController {
 
 	@Autowired
 	UserService mUserLoginService;
 
-	@Autowired
-	CreditService mCreditService;
 
 	@GetMapping(path = "/")
 	public String welcome() {
@@ -39,7 +37,7 @@ public class LoginController {
 		return "Welcome";
 	}
 
-	@PostMapping(path = "/login")
+	@PostMapping(path = "/loginUser")
 	public String login(@RequestBody User pUser) {
 
 		String loginSuccess = "Failure";
@@ -52,11 +50,4 @@ public class LoginController {
 		return loginSuccess;
 	}
 
-	@GetMapping(path = "/creditHistory/{userId}", produces = MediaType.APPLICATION_JSON_VALUE)
-	public List<CreditHistory> creditHistory(@PathVariable("userId") String userId) {
-
-		List<CreditHistory> myCreditList = mCreditService.getCreditHistory(userId);
-		return myCreditList;
-
-	}
 }
